@@ -1,0 +1,40 @@
+{
+  "name": "canvas-pi",
+  "version": "1.0.0",
+  "description": "Self-hosted infinite canvas app optimized for Raspberry Pi",
+  "main": "backend/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voidnonymous/canvas-pi.git"
+  },
+  "homepage": "https://github.com/voidnonymous/canvas-pi#readme",
+  "bugs": {
+    "url": "https://github.com/voidnonymous/canvas-pi/issues"
+  },
+  "keywords": [
+    "canvas",
+    "raspberry-pi",
+    "self-hosted",
+    "infinite-canvas",
+    "notes",
+    "whiteboard",
+    "visualization"
+  ],
+  "author": "voidnonymous",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-deps": "cd backend && npm install",
+    "setup": "./scripts/setup-app.sh",
+    "backup": "./scripts/backup.sh",
+    "update": "./scripts/update.sh",
+    "logs": "journalctl -u canvas-pi -f",
+    "status": "systemctl status canvas-pi",
+    "restart": "systemctl restart canvas-pi"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
